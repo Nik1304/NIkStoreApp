@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tienda Virtual - FakeStore</title>
+  <link rel="stylesheet" href="./styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Pantalla de inicio -->
+  <div id="welcome-screen" class="overlay fade-in">
+    <h1 class="titulo-nik">NIK STORE</h1>
+    <button id="enter-btn" class="btn">Ingresar</button>
+  </div>
+
+  <!-- Catálogo principal -->
+  <header>
+    <h1>🛍️ Nik Store :)</h1>
+    <div class="filtro-bar">
+      <input type="text" id="search" placeholder="Buscar productos..." />
+      <select id="filter-category" class="select-category"></select>
+      <select id="sort-options" class="select-sort">
+        <option value="">Ordenar por</option>
+        <option value="asc">Precio: Menor a Mayor</option>
+        <option value="desc">Precio: Mayor a Menor</option>
+      </select>
+    </div>
+    <div id="cart-icon">🛒 <span id="cart-count">0</span></div>
+  </header>
+
+  <main>
+    <section id="product-list"></section>
+    <aside id="cart" class="cart-sidebar">
+      <button id="close-cart" class="close-btn">✖</button>
+      <h2>🛒 Carrito</h2>
+      <div id="cart-items"></div>
+      <div id="cart-total"></div>
+      <button id="checkout-btn" class="checkout-btn">Finalizar Compra</button>
+    </aside>
+  </main>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
