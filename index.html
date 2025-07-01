@@ -3,12 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tienda Virtual - FakeStore</title>
+  <title>Tienda Virtual - Nik Store</title>
   <link rel="stylesheet" href="./styles.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
-
   <!-- Pantalla de inicio -->
   <div id="welcome-screen" class="overlay fade-in">
     <h1 class="titulo-nik">NIK STORE</h1>
@@ -16,9 +15,8 @@
   </div>
 
   <!-- Catálogo principal -->
-
   <header>
-    <h1>🛍️ Nik Store :)</h1>
+    <h1>🛍️ Nik Store</h1>
     <div class="filtro-bar">
       <input type="text" id="search" placeholder="Buscar productos..." />
       <select id="filter-category" class="select-category"></select>
@@ -42,6 +40,18 @@
     </aside>
   </main>
 
+  <!-- Template invisible para los productos del carrito -->
+  <template id="cart-item-template">
+    <div class="cart-item">
+      <div class="cart-title"></div>
+      <div class="cart-controls">
+        <button class="qty-btn decrement">−</button>
+        <span class="cart-qty">1</span>
+        <button class="qty-btn increment">+</button>
+        <button class="remove-btn">Eliminar</button>
+      </div>
+    </div>
+  </template>
 
   <script type="module" src="./main.js"></script>
 </body>
