@@ -8,13 +8,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Pantalla de inicio -->
   <div id="welcome-screen" class="overlay fade-in">
     <h1 class="titulo-nik">NIK STORE</h1>
     <button id="enter-btn" class="btn">Ingresar</button>
   </div>
 
-  <!-- Catálogo principal -->
   <header>
     <h1>🛍️ Nik Store</h1>
     <div class="filtro-bar">
@@ -25,6 +23,7 @@
         <option value="asc">Precio: Menor a Mayor</option>
         <option value="desc">Precio: Mayor a Menor</option>
       </select>
+      <button id="view-history-btn" class="btn">Ver Compras Anteriores</button>
     </div>
     <div id="cart-icon">🛒 <span id="cart-count">0</span></div>
   </header>
@@ -38,9 +37,14 @@
       <div id="cart-total"></div>
       <button id="checkout-btn" class="checkout-btn">Finalizar Compra</button>
     </aside>
+
+    <aside id="purchase-history" class="cart-sidebar">
+      <button id="close-history" class="close-btn">✖</button>
+      <h2>Historial de Compras</h2>
+      <div id="history-items"></div>
+    </aside>
   </main>
 
-  <!-- Template invisible para los productos del carrito -->
   <template id="cart-item-template">
     <div class="cart-item">
       <div class="cart-title"></div>

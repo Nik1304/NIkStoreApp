@@ -1,11 +1,9 @@
-/* === RESET BÁSICO === */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* === ESTILOS GENERALES === */
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #f4f4f4;
@@ -18,7 +16,6 @@ h1, h2, h3 {
   font-weight: bold;
 }
 
-/* === ENCABEZADO === */
 header {
   background-color: #000;
   color: #fff;
@@ -44,7 +41,6 @@ input, select {
   border: 1px solid #ccc;
 }
 
-/* === PANTALLA DE BIENVENIDA === */
 .overlay {
   position: fixed;
   z-index: 9999;
@@ -99,7 +95,6 @@ input, select {
   background: gold;
 }
 
-/* === CATÁLOGO DE PRODUCTOS === */
 #product-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -160,8 +155,7 @@ input, select {
   background-color: #444;
 }
 
-/* === CARRITO LATERAL === */
-#cart {
+#cart, #purchase-history {
   position: fixed;
   top: 0;
   right: -100%;
@@ -175,7 +169,7 @@ input, select {
   overflow-y: auto;
 }
 
-#cart.visible {
+#cart.visible, #purchase-history.visible {
   right: 0;
 }
 
@@ -259,7 +253,26 @@ input, select {
   background-color: darkgreen;
 }
 
-/* === RESPONSIVE === */
+.purchase-record {
+  border: 1px solid #eee;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.purchase-record h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #000;
+}
+
+.purchase-record p {
+  font-size: 0.9rem;
+  margin-bottom: 2px;
+}
+
+
 @media (max-width: 600px) {
   #product-list {
     grid-template-columns: 1fr;
@@ -274,7 +287,7 @@ input, select {
     align-items: center;
   }
 
-  #cart {
+  #cart, #purchase-history {
     width: 100%;
   }
 }
